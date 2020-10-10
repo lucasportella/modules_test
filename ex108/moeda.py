@@ -16,6 +16,6 @@ def metade(numero):
     return numero / 2
 
 
-def moeda(numero):
-    numero = 'R$',numero
-    return numero
+def moeda(numero,moeda='R$'):
+    return f'{moeda}{numero:.2f}'.replace('.',',')
+
