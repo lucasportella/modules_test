@@ -1,4 +1,4 @@
-def aumentar(numero,percentual=10 , formatar=True):
+def aumentar(numero,percentual, formatar=True):
     '''
     :param numero: número que foi inserido para fazer o cálculo
     :param percentual: porcentagem do aumento
@@ -34,7 +34,7 @@ def metade(numero,formatar=True):
         return moeda(numero/2)
 
 def moeda(numero,moeda='R$'):
-    return f'{moeda}{numero:.2f}'.replace('.',',')
+    return f'{moeda} {numero:.2f}'.replace('.',',')
 
 
 def resumo(valor, aumento_porcento=10, redução_porcento=10):
@@ -45,14 +45,12 @@ def resumo(valor, aumento_porcento=10, redução_porcento=10):
     :return:
     '''
 
-    retorno_aumento = aumentar(valor,aumento_porcento)
-    print(retorno_aumento)
     print('-' * 40)
     print(f"{'RESUMO DO VALOR':^40}")
     print('-' * 40)
-    print(f'{"Preço analisado:":<25}{moeda(valor)}')
-    print(f'{"Dobro do preço:":<25}{dobro(valor)}')
-    print(f'{"Metade do preço:":<25}{metade(valor)}')
-    print(f'{aumento_porcento}{"% de aumento:":<23}{aumentar(valor)}')
-    print(f'{redução_porcento}{"% de redução:":<23}{reduzir(valor)}')
+    print(f'Preço analisado: \t{moeda(valor)}')
+    print(f'Dobro do preço: \t{dobro(valor)}')
+    print(f'Metade do preço: \t{metade(valor)}')
+    print(f'{aumento_porcento}% de aumento: \t{aumentar(valor,aumento_porcento)}')
+    print(f'{redução_porcento}% de redução: \t{reduzir(valor,redução_porcento)}')
     print('-' * 40)
