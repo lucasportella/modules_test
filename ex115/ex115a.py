@@ -1,8 +1,9 @@
 from time import sleep
 from ex115.modulos.cores import colorizar
 from ex115.modulos.menu_principal import menu_principal
-flag = False
-while flag == False:
+from ex115.modulos.bloco import formatar_opção
+
+while True:
     menu_principal()
     try:
         opção = int(input(f'{colorizar("Sua opção: ","amarelo")}'))
@@ -16,20 +17,11 @@ while flag == False:
              sleep(1)
              continue
          elif opção == 1:
-             print('-' * 60)
-             print(f'{f"Opção {opção}":^60}')
-             print('-' * 60)
-             sleep(2)
+            formatar_opção(opção)
          elif opção == 2:
-             print('-' * 60)
-             print(f'{f"Opção {opção}":^60}')
-             print('-' * 60)
-             sleep(2)
+             formatar_opção(opção)
          elif opção == 3:
-             print('-' * 60)
-             print(f'{f"Opção {opção}":^60}')
-             print('-' * 60)
-             sleep(2)
+             formatar_opção(opção)
              print(f'{"Saindo do sistema... Até logo!":^60}')
              print('-' * 60)
              break
