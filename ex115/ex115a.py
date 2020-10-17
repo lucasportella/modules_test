@@ -2,6 +2,12 @@ from time import sleep
 from ex115.modulos.cores import colorizar
 from ex115.modulos.menu_principal import menu_principal
 from ex115.modulos.bloco import formatar_opção
+from ex115.modulos.arquivo import arquivoExiste, criarArquivo, lerArquivo
+
+arquivo = 'cadastroRegistro.txt'
+
+if not arquivoExiste(arquivo):
+    criarArquivo(arquivo)
 
 while True:
     menu_principal()
@@ -18,6 +24,7 @@ while True:
              continue
          elif opção == 1:
             formatar_opção(opção)
+            lerArquivo(arquivo)
          elif opção == 2:
              formatar_opção(opção)
          elif opção == 3:
