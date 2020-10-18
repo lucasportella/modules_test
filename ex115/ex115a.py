@@ -2,7 +2,7 @@ from time import sleep
 from ex115.modulos.cores import colorizar
 from ex115.modulos.menu_principal import menu_principal
 from ex115.modulos.bloco import formatar_opção
-from ex115.modulos.arquivo import arquivoExiste, criarArquivo, lerArquivo
+from ex115.modulos.arquivo import arquivoExiste, criarArquivo, lerArquivo, cadastrarPessoaNoArquivo
 
 arquivo = 'cadastroRegistro.txt'
 
@@ -23,12 +23,13 @@ while True:
              sleep(1)
              continue
          elif opção == 1:
-            formatar_opção(opção)
+            formatar_opção("OPÇÃO 1 - VER CADASTRADOS")
             lerArquivo(arquivo)
          elif opção == 2:
-             formatar_opção(opção)
+             formatar_opção("OPÇÃO 2 - NOVO CADASTRO")
+             cadastrarPessoaNoArquivo(arquivo)
          elif opção == 3:
-             formatar_opção(opção)
+             formatar_opção("OPÇÃO 3 - SAIR DO SISTEMA")
              print(f'{"Saindo do sistema... Até logo!":^60}')
              print('-' * 60)
              break

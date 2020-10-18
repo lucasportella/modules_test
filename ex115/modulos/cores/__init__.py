@@ -7,4 +7,8 @@ def colorizar(texto_para_colorir,cor_escolhida):
         texto_para_colorir = f'\033[0;33m{texto_para_colorir}\033[m'
     elif cor_escolhida == 'azul':
         texto_para_colorir = f'\033[0;34m{texto_para_colorir}\033[m'
+    elif cor_escolhida == 'roxo':
+        texto_para_colorir = f'\033[0;35m{texto_para_colorir}\033[m'
+    elif cor_escolhida == 'ciano':
+        texto_para_colorir = f'\033[0;36m{texto_para_colorir}\033[m'
     return texto_para_colorir

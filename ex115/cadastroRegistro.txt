@@ -1,2 +1,9 @@
-lucas; 28
-ana; 29
+Lucas;28
+Gisele;25
+Bob;33
+Lua;13
+Rudson;4
+Artemis;2345
+Iracema;65
+Rudevaldo;44
+Lia 15;15
